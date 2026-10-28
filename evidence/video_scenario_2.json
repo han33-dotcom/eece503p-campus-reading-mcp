@@ -1,0 +1,16 @@
+{
+  "mode": "offline scripted adapter",
+  "prompt": "Save book B003 to my course list.",
+  "discovered_tools": [
+    "search_catalog",
+    "save_reading_item",
+    "plan_reading"
+  ],
+  "tool": "save_reading_item",
+  "arguments": {
+    "book_id": "B003",
+    "list_name": "course"
+  },
+  "actual_output": "{'type': 'text', 'text': '{\"status\":\"saved\",\"list_name\":\"course\",\"book\":{\"book_id\":\"B003\",\"title\":\"Python Crash Course\",\"author\":\"Eric Matthes\",\"subjects\":[\"python\",\"programming\"]},\"saved_at\":\"2026-10-28T22:27:07.821483+00:00\"}'}",
+  "final_output": "Actual MCP result: [{'type': 'input_text', 'text': '{\"status\":\"saved\",\"list_name\":\"course\",\"book\":{\"book_id\":\"B003\",\"title\":\"Python Crash Course\",\"author\":\"Eric Matthes\",\"subjects\":[\"python\",\"programming\"]},\"saved_at\":\"2026-10-28T22:27:07.821483+00:00\"}'}]"
+}

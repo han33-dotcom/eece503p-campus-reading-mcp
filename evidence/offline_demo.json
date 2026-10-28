@@ -1,0 +1,53 @@
+[
+  {
+    "prompt": "Find books about artificial intelligence.",
+    "calls": [
+      {
+        "name": "search_catalog",
+        "arguments": {
+          "query": "artificial intelligence"
+        }
+      }
+    ],
+    "final_output": "Actual MCP result: [{'type': 'input_text', 'text': '{\"query\":\"artificial intelligence\",\"count\":2,\"books\":[{\"book_id\":\"B001\",\"title\":\"Artificial Intelligence: A Modern Approach\",\"author\":\"Stuart Russell and Peter Norvig\",\"subjects\":[\"artificial intelligence\",\"agents\",\"search\"]},{\"book_id\":\"B004\",\"title\":\"Reinforcement Learning: An Introduction\",\"author\":\"Richard Sutton and Andrew Barto\",\"subjects\":[\"artificial intelligence\",\"reinforcement learning\",\"agents\"]}]}'}]"
+  },
+  {
+    "prompt": "Save book B003 to my course list.",
+    "calls": [
+      {
+        "name": "save_reading_item",
+        "arguments": {
+          "book_id": "B003",
+          "list_name": "course"
+        }
+      }
+    ],
+    "final_output": "Actual MCP result: [{'type': 'input_text', 'text': '{\"status\":\"saved\",\"list_name\":\"course\",\"book\":{\"book_id\":\"B003\",\"title\":\"Python Crash Course\",\"author\":\"Eric Matthes\",\"subjects\":[\"python\",\"programming\"]},\"saved_at\":\"2026-10-28T22:25:09.986833+00:00\"}'}]"
+  },
+  {
+    "prompt": "Find a book about agents and save it to my course list.",
+    "calls": [
+      {
+        "name": "plan_reading",
+        "arguments": {
+          "query": "agents",
+          "list_name": "course"
+        }
+      }
+    ],
+    "final_output": "Actual MCP result: [{'type': 'input_text', 'text': '{\"query\":\"agents\",\"selection_rule\":\"Lowest book_id among all matches\",\"matches\":2,\"steps\":[\"search_catalog\",\"save_reading_item\"],\"saved\":{\"status\":\"saved\",\"list_name\":\"course\",\"book\":{\"book_id\":\"B001\",\"title\":\"Artificial Intelligence: A Modern Approach\",\"author\":\"Stuart Russell and Peter Norvig\",\"subjects\":[\"artificial intelligence\",\"agents\",\"search\"]},\"saved_at\":\"2026-10-28T22:25:10.010440+00:00\"}}'}]"
+  },
+  {
+    "prompt": "Find a book about quantum gardening and save it to my course list.",
+    "calls": [
+      {
+        "name": "plan_reading",
+        "arguments": {
+          "query": "quantum gardening",
+          "list_name": "course"
+        }
+      }
+    ],
+    "final_output": "Actual MCP result: [{'type': 'input_text', 'text': 'NO_MATCH: No book matched; try fewer words. Nothing was saved.'}]"
+  }
+]

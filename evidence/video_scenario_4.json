@@ -1,0 +1,16 @@
+{
+  "mode": "offline scripted adapter",
+  "prompt": "Find a book about quantum gardening and save it to my course list.",
+  "discovered_tools": [
+    "search_catalog",
+    "save_reading_item",
+    "plan_reading"
+  ],
+  "tool": "plan_reading",
+  "arguments": {
+    "query": "quantum gardening",
+    "list_name": "course"
+  },
+  "actual_output": "{'type': 'text', 'text': 'NO_MATCH: No book matched; try fewer words. Nothing was saved.'}",
+  "final_output": "Actual MCP result: [{'type': 'input_text', 'text': 'NO_MATCH: No book matched; try fewer words. Nothing was saved.'}]"
+}

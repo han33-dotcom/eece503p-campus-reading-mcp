@@ -1,0 +1,54 @@
+[
+  {
+    "prompt": "Find books about artificial intelligence.",
+    "calls": [
+      {
+        "name": "search_catalog",
+        "arguments": {
+          "query": "artificial intelligence",
+          "limit": 5
+        }
+      }
+    ],
+    "final_output": "I found two books about artificial intelligence:\n\n1. \"Artificial Intelligence: A Modern Approach\" by Stuart Russell and Peter Norvig\n2. \"Reinforcement Learning: An Introduction\" by Richard Sutton and Andrew Barto\n\nWould you like more information about any of these books or want to save any of them to a reading list?"
+  },
+  {
+    "prompt": "Save book B003 to my course list.",
+    "calls": [
+      {
+        "name": "save_reading_item",
+        "arguments": {
+          "book_id": "B003",
+          "list_name": "course"
+        }
+      }
+    ],
+    "final_output": "The book \"Python Crash Course\" by Eric Matthes (ID B003) has been saved to your course list. If you need anything else, just let me know!"
+  },
+  {
+    "prompt": "Find a book about agents and save it to my course list.",
+    "calls": [
+      {
+        "name": "plan_reading",
+        "arguments": {
+          "query": "agents",
+          "list_name": "course"
+        }
+      }
+    ],
+    "final_output": "I found two books about agents and saved the book with the lowest book ID, \"Artificial Intelligence: A Modern Approach\" by Stuart Russell and Peter Norvig, to your course list. If you want me to find or save more books about agents, just let me know!"
+  },
+  {
+    "prompt": "Find a book about quantum gardening and save it to my course list.",
+    "calls": [
+      {
+        "name": "plan_reading",
+        "arguments": {
+          "query": "quantum gardening",
+          "list_name": "course"
+        }
+      }
+    ],
+    "final_output": "I couldn't find any books specifically about \"quantum gardening\" in the catalogue. Would you like me to try a broader search or look for something related?"
+  }
+]

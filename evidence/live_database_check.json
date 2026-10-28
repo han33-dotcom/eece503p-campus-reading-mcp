@@ -1,0 +1,16 @@
+{
+  "source": "Independent SQLite SELECT after live browser recording",
+  "row_count": 2,
+  "rows": [
+    [
+      "course",
+      "B001"
+    ],
+    [
+      "course",
+      "B003"
+    ]
+  ],
+  "no_match_created_extra_row": false,
+  "all_three_tools_selected_by_live_model": true
+}

@@ -1,0 +1,18 @@
+Hassan Nasrallah - EECE503P - Assignment C5
+Campus Reading MCP Toolkit
+
+Code repository:
+https://github.com/han33-dotcom/eece503p-campus-reading-mcp
+
+Live OpenAI agent demonstration (5 minutes 36 seconds):
+https://drive.google.com/file/d/18dwtMw_RwCStCVLHslIfjr2hzP4SiQsM/view
+
+Written summary: SUMMARY.md (359 words)
+Reflection: REFLECTION.md (two paragraphs)
+Validation: 18 passing tests; live model uses all three tools and handles NO_MATCH.
+
+The full ZIP includes source code, setup instructions, tests, evidence, written work,
+the live recording, an offline supplemental recording, and a Git history bundle.
+
+Video access: Anyone with the link - Viewer.
+Repository visibility: Public.

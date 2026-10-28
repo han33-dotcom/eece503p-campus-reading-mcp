@@ -1,0 +1,7 @@
+[
+  {"book_id":"B001","title":"Artificial Intelligence: A Modern Approach","author":"Stuart Russell and Peter Norvig","subjects":["artificial intelligence","agents","search"]},
+  {"book_id":"B002","title":"Designing Data-Intensive Applications","author":"Martin Kleppmann","subjects":["databases","distributed systems","data"]},
+  {"book_id":"B003","title":"Python Crash Course","author":"Eric Matthes","subjects":["python","programming"]},
+  {"book_id":"B004","title":"Reinforcement Learning: An Introduction","author":"Richard Sutton and Andrew Barto","subjects":["artificial intelligence","reinforcement learning","agents"]},
+  {"book_id":"B005","title":"Computer Networking: A Top-Down Approach","author":"James Kurose and Keith Ross","subjects":["networks","internet","protocols"]}
+]

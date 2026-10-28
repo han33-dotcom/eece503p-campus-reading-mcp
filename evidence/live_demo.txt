@@ -1,0 +1,27 @@
+MODE: LIVE OpenAI model + Agents SDK + stdio MCP
+MCP tools/list: plan_reading, save_reading_item, search_catalog
+
+USER: Find books about artificial intelligence.
+SDK -> MCP tools/call: {"name": "search_catalog", "arguments": {"query": "artificial intelligence", "limit": 5}}
+MCP -> SDK result: {'type': 'text', 'text': '{"query":"artificial intelligence","count":2,"books":[{"book_id":"B001","title":"Artificial Intelligence: A Modern Approach","author":"Stuart Russell and Peter Norvig","subjects":["artificial intelligence","agents","search"]},{"book_id":"B004","title":"Reinforcement Learning: An Introduction","author":"Richard Sutton and Andrew Barto","subjects":["artificial intelligence","reinforcement learning","agents"]}]}'}
+ASSISTANT: I found two books about artificial intelligence:
+
+1. "Artificial Intelligence: A Modern Approach" by Stuart Russell and Peter Norvig
+2. "Reinforcement Learning: An Introduction" by Richard Sutton and Andrew Barto
+
+Would you like more information about any of these books or want to save any of them to a reading list?
+
+USER: Save book B003 to my course list.
+SDK -> MCP tools/call: {"name": "save_reading_item", "arguments": {"book_id": "B003", "list_name": "course"}}
+MCP -> SDK result: {'type': 'text', 'text': '{"status":"saved","list_name":"course","book":{"book_id":"B003","title":"Python Crash Course","author":"Eric Matthes","subjects":["python","programming"]},"saved_at":"2026-10-28T22:43:53.726559+00:00"}'}
+ASSISTANT: The book "Python Crash Course" by Eric Matthes (ID B003) has been saved to your course list. If you need anything else, just let me know!
+
+USER: Find a book about agents and save it to my course list.
+SDK -> MCP tools/call: {"name": "plan_reading", "arguments": {"query": "agents", "list_name": "course"}}
+MCP -> SDK result: {'type': 'text', 'text': '{"query":"agents","selection_rule":"Lowest book_id among all matches","matches":2,"steps":["search_catalog","save_reading_item"],"saved":{"status":"saved","list_name":"course","book":{"book_id":"B001","title":"Artificial Intelligence: A Modern Approach","author":"Stuart Russell and Peter Norvig","subjects":["artificial intelligence","agents","search"]},"saved_at":"2026-10-28T22:43:56.014641+00:00"}}'}
+ASSISTANT: I found two books about agents and saved the book with the lowest book ID, "Artificial Intelligence: A Modern Approach" by Stuart Russell and Peter Norvig, to your course list. If you want me to find or save more books about agents, just let me know!
+
+USER: Find a book about quantum gardening and save it to my course list.
+SDK -> MCP tools/call: {"name": "plan_reading", "arguments": {"query": "quantum gardening", "list_name": "course"}}
+MCP -> SDK result: {'type': 'text', 'text': 'NO_MATCH: No book matched; try fewer words. Nothing was saved.'}
+ASSISTANT: I couldn't find any books specifically about "quantum gardening" in the catalogue. Would you like me to try a broader search or look for something related?
